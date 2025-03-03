@@ -1,0 +1,128 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #f7d082, #a1c4e8); /* Gradient background */
+  color: #333;
+  text-align: center;
+}
+
+header {
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #f7d082;
+}
+
+.clocks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.clock-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.clock-container:hover {
+  transform: scale(1.05);
+}
+
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.clock.analog {
+  border: 10px solid #fff;
+  background: #f0f0f0;
+}
+
+.clock.digital {
+  background: #333;
+  color: #00ff00;
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+}
+
+.clock-label {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #f7d082;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .clocks {
+    grid-template-columns: 1fr;
+  }
+}
